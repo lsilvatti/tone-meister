@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import KeyBoard from 'components/KeyBoard/KeyBoard';
 
 function App() {
+  const [keyPressed, setKeyPressed] = useState<string | null>(null);
+  const handleKeyPressed = (key:string) => {
+    setKeyPressed(key);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {keyPressed}
+        <KeyBoard handleKeyPressed={(key: string) => handleKeyPressed(key)}></KeyBoard>
     </div>
   );
 }
