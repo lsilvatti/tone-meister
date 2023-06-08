@@ -78,4 +78,43 @@ const octave:Array<IOctaveKey> = [
     }
 ]
 
+const octaveWithoutBlacks:Array<IOctaveKey> = [
+    {
+        name: "C",
+        note: PianoC,
+        black: false
+    },
+    {
+        name: "D",
+        note: PianoD,
+        black: false
+    },
+    {
+        name: "E",
+        note: PianoE,
+        black: false
+    },
+    
+    {
+        name: "F",
+        note: PianoF,
+        black: false
+    },
+    {
+        name: "G",
+        note: PianoG,
+        black: false
+    },
+    {
+        name: "A",
+        note: PianoA,
+        black: false
+    },
+    {
+        name: "B",
+        note: PianoB,
+        black: false
+    }
+]
+
 export  { octave }

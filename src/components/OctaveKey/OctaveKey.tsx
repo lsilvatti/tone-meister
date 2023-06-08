@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { IOctaveKeyProps } from './types'
+import { playSound } from 'lib/sound'
 
 import Style from './style';
 
 function OctaveKey({name = "", note = "", black = true, handleKeyPressed}:IOctaveKeyProps) {
     const playNote = () => {
-      const noteAudio = new Audio(note);
-        noteAudio.play();
+        playSound(note);
         handleKeyPressed(name);
     }
 
